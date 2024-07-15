@@ -2,6 +2,9 @@ body {
     padding: 0;
     margin: 0;
 }
+.contain{
+    padding: 0px 10px;
+}
 
 .contact-us-button {
     background-color: #FF3147;
@@ -24,7 +27,7 @@ h2 {
 .text {
     width: 75%;
     /* margin-top: 85px; */
-    padding: 100px 0;
+    padding: 100px ;
 }
 
 .text h1 {
@@ -59,16 +62,39 @@ h2 {
         display: flex;
         /* flex-direction: column; */
         margin-top: 0 !important;
+        margin-bottom: 50px;
     }
 
     .text {
         width: 100vw;
-        padding: 0;
+        padding: 0px 15px;
+    }
+
+    .text p{
+        width: 100%;
+        text-align: justify;
     }
 
     .image img {
-        display: none;
-        visibility: hidden;
+        width: 100%;
+        margin: 0%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .contain .container {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .image img {
+        /* width: 100vw; */
+        margin: 0%;
+        height: auto;
     }
 }
 
@@ -107,6 +133,7 @@ h2 {
     background: #FAFAFA 0% 0% no-repeat padding-box;
     opacity: 1;
     padding: 10px;
+    margin-bottom: 50px;
 }
 
 .container2 {
@@ -336,8 +363,18 @@ h2 {
 }
 
 .read-more:hover {
-    background-color: #ba6262;
-    color: white;
+
+    color: #FF3147;
+}
+
+@media (max-width: 1024px) {
+    .wrapper .carousel {
+        grid-auto-columns: calc((100% / 3));
+    }
+
+    .wrapper {
+        width: 100vw;
+    }
 }
 
 
@@ -350,12 +387,17 @@ h2 {
         width: 100vw;
     }
 
+    .des{
+        margin-bottom: 50px;
+    }
+
     .container2 {
         margin: 0px 0px;
     }
 
     .container {
         margin: 0px 20px;
+        width: 100vw;
     }
 
     .container5 {
@@ -386,6 +428,9 @@ h2 {
     /* text-align: center; 
 } */
 
+.choose{
+    margin-bottom: 50px;
+}
 
 .why-choose-us h3 {
     text-align: center;
@@ -466,6 +511,7 @@ h2 {
 
 @media (max-width :576px) {
     .choose {
+
         width: 100vw;
     }
 
@@ -481,6 +527,7 @@ h2 {
     display: flex;
     width: 100%;
     /* Adjust as necessary */
+    margin-bottom: -10px;
 
 }
 
@@ -513,6 +560,7 @@ h2 {
     padding-top: 100px;
     margin: 0px 10px;
     width: 100%;
+    flex-shrink: 3;
 }
 
 .project {
@@ -535,7 +583,7 @@ h2 {
 
 
 .rect:hover {
-    background-color: #FF3147;
+    /* background-color: #FF3147; */
     cursor: pointer;
 }
 
@@ -546,7 +594,7 @@ h2 {
     height: 189px;
     background: #F6F6F6 0% 0% no-repeat padding-box;
     opacity: 1;
-    padding: 40px;
+    padding: 20px;
 }
 
 .gender {
@@ -576,7 +624,7 @@ h2 {
     background: #FF3147 !important;
 }
 
-@media screen and (max-width: 992px) {
+/* @media screen and (max-width: 992px) {
     .rect {
         flex-direction: column;
         width: 100vw;
@@ -586,7 +634,29 @@ h2 {
     .project img {
         width: 100%;
         padding: 0;
+        display: block;
         margin: 0;
+    }
+} */
+
+
+@media screen and (max-width: 992px) {
+    .container5 {
+        flex-direction: column;
+        width: 100vw;
+
+    }
+    .container{
+        margin: 0px 0px;
+    }
+    .react{
+        padding-top: 50px;
+    }
+    .project{
+        margin: 0px 10px;
+    }
+    .rect{
+        height: auto;
     }
 }
 
@@ -629,7 +699,7 @@ h2 {
 /* --------- Expert Growth  ------------ */
 
 .container {
-    padding: 20px;
+    /* padding: 20px; */
 }
 
 .best {
@@ -777,6 +847,7 @@ h2 {
     color: #000000;
     opacity: 1;
     position: relative;
+    margin: 0px 15px;
 }
 
 .feedback img {
@@ -814,12 +885,26 @@ h2 {
 /* ------------ Brand Section ------------- */
 
 .brandsSection {
+    height: 30%;
     width: 100%;
-    height: 310px;
     background: transparent url('./assets/NoPath - Copy.png') 0% 0% no-repeat padding-box;
     display: flex;
     justify-content: center;
     align-items: center;
     opacity: 1.81;
     overflow: hidden;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+
+.brandsSection img {
+    width: 60%;
+    height: 30%;
+}
+
+@media (max-width:576px) {
+    .brandsSection {
+        padding: 10px 0px;
+    }
 }
